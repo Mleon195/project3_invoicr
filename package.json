@@ -1,0 +1,24 @@
+{
+  "name": "project3_invoicr",
+  "version": "1.0.0",
+  "description": "simple client managemet",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mleon195/project3_invoicr.git"
+  },
+  "dependencies": {
+    "express": "*",
+    "mongoose":"*",
+    "body-parser":"*"
+  },
+  "author": "Marcelo Leon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mleon195/project3_invoicr/issues"
+  },
+  "homepage": "https://github.com/Mleon195/project3_invoicr#readme"
+}
