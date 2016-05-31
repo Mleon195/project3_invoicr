@@ -34,3 +34,5 @@ router.post('/', function(req, res){
 		res.json(invoice);
 	});
 });
+
+module.exports = router;
