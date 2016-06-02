@@ -7,7 +7,8 @@ var customers = require('./routes/customers');
 var invoices = require('./routes/invoices');
 
 // Mongoose Connect
-mongoose.connect('mongodb://localhost/invoicr');
+mongoose.connect( process.env.MONGODB_URI ||
+                  process.env.MONGOHQ_URL || 'mongodb://localhost/invoicr');
 var db = mongoose.connection;
 
 app.use(express.static(__dirname+'/client'));
@@ -20,5 +21,6 @@ app.get('/', function(req, res){
 app.use('/api/customers', customers);
 app.use('/api/invoices', invoices);
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
+
 console.log('Started on port 3000...');
