@@ -83,7 +83,9 @@ body {
 .main .page-header {
   margin-top: 0;
 }
-
+.img-small{
+  width: 115px;
+}
 
 /*
  * Placeholder dashboard ideas
