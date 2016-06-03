@@ -25,19 +25,19 @@ myApp.controller('CustomersController', ['$scope', '$http','$location','$routePa
 
 	$scope.addCustomer = function(){
 		$http.post('/api/customers/',$scope.customer).success(function(response){
-			window.location.href='/#customers';
+			window.location.href='/customers';
 		});
 	};
 
 	$scope.updateCustomer = function(){
 		$http.put('/api/customers/'+$scope.customer._id,$scope.customer).success(function(response){
-			window.location.href='/#customers';
+			window.location.href='/customers';
 		});
 	};
 
 	$scope.deleteCustomer = function(id){
 		$http.delete('/api/customers/'+id).success(function(response){
-			window.location.href='/#customers';
+			window.location.href='/customers';
 		});
 	};
 }]);
