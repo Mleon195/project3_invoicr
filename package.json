@@ -16,6 +16,9 @@
     "body-parser":"*",
     "bower": "*"
   },
+  "scripts": {
+    "postinstall": "bower install"
+  },
   "author": "Marcelo Leon",
   "license": "ISC",
   "bugs": {
