@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
+    "postinstall": "bower install",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,9 +17,6 @@
     "mongoose":"*",
     "body-parser":"*",
     "bower": "*"
-  },
-  "scripts": {
-    "postinstall": "bower install"
   },
   "author": "Marcelo Leon",
   "license": "ISC",
