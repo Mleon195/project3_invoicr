@@ -15,7 +15,8 @@ app.use(express.static(__dirname+'/client'));
 app.use(bodyParser.json());
 
 app.get('/', function(req, res){
-	res.send('Please use /api/customers or /api/invoices');
+	// console.log('is this running?');
+	res.sendFile(process.cwd() + "/Client/index.html");
 });
 
 app.use('/api/customers', customers);
