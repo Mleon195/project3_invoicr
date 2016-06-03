@@ -11,12 +11,11 @@ mongoose.connect( process.env.MONGODB_URI ||
                   process.env.MONGOHQ_URL || 'mongodb://localhost/invoicr');
 var db = mongoose.connection;
 
-app.use("/static", express.static('Client'));
+app.use(express.static(__dirname + '/Client'));
 app.use(bodyParser.json());
 
 app.get('/', function(req, res){
-	// console.log('is this running?');
-	res.send(process.cwd() + "/Client/index.html");
+	res.sendFile(process.cwd() + "/Client/index.html");
 });
 
 app.use('/api/customers', customers);
