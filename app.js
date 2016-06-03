@@ -12,6 +12,7 @@ mongoose.connect( process.env.MONGODB_URI ||
 var db = mongoose.connection;
 
 app.use(express.static(__dirname + '/Client'));
+app.use("/static", express.static("bower_components"));
 app.use(bodyParser.json());
 
 app.get('/', function(req, res){
