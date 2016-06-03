@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 
 app.get('/', function(req, res){
 	// console.log('is this running?');
-	res.sendFile(process.cwd() + "/Client/index.html");
+	res.send(process.cwd() + "/Client/index.html");
 });
 
 app.use('/api/customers', customers);
