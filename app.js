@@ -11,7 +11,7 @@ mongoose.connect( process.env.MONGODB_URI ||
                   process.env.MONGOHQ_URL || 'mongodb://localhost/invoicr');
 var db = mongoose.connection;
 
-app.use(express.static(__dirname+'/client'));
+app.use("/static", express.static('Client'));
 app.use(bodyParser.json());
 
 app.get('/', function(req, res){
